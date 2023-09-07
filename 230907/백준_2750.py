@@ -1,5 +1,4 @@
 # 수 정렬하기
-import random
 
 N = int(input())
 S = list(map(int, input().split()))
