@@ -1,7 +1,7 @@
 # 다이나믹 프로그래밍을 통한 계산
 for i in range(1, 15):
     for j in range(1, 15):
-        apart[i][j] = apart[i][j-1] + apart[i-1][j]
+        apart[i][j] = apart[i][j-1] + apart[i-1][j]                     #구간 합
 
 T = int(input())  # Test Case의 수
 
