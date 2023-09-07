@@ -1,5 +1,5 @@
 #부녀회장이 될거야
-#구간 합
+#재귀 함수
 
 import sys
 input = sys.stdin.readline
