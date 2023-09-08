@@ -1,0 +1,7 @@
+A, B = map(int, input().split())
+
+S = 아직덜했음...마무리해야듸....
+
+ans = 0
+for i in range(A-1, B):
+    ans += S[i]
