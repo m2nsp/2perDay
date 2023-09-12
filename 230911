@@ -1,0 +1,45 @@
+def P1(param1 : int, param2 : int, param3 : int) -> int:
+    x = param1
+    y = param2
+    z = param3
+    ##########  ignore code here  ###########
+    print("###################### p2 call ######################\n\n")
+    print(f"  id(param1) : {id(param1)} \n  id(x) : {id(x)}\n  param1 == x : {param1 == x}\n  param1 is x : {param1 is x}\n ")
+    print(f"  id(param2) : {id(param2)} \n  id(y) : {id(y)}\n  param2 == y : {param2 == y}\n  param1 is x : {param2 is y}\n ")
+    print(f"  id(param3) : {id(param3)} \n  id(z) : {id(z)}\n  param3 == z : {param3 == z}\n  param1 is x : {param3 is z}\n ")
+    print(f"#####################################################\n\n")
+    ########################################
+    return int((param1 + param2 + param3) / 3)
+
+
+x = 1250
+y = 2640
+z = 4030
+
+##########  ignore code here  ###########
+print("------------ before function call ------------\n")
+print(f"id(x) : {id(x)}\nid(y) : {id(y)}\nid(z) : {id(z)}\n")
+########################################
+
+
+w = P1(z, y, x)
+
+##########  ignore code here  ###########
+print("------------ after function call ------------\n")
+print(f"id(x) : {id(x)}\nid(y) : {id(y)}\nid(z) : {id(z)}\nid(w) : {id(w)}\n")
+print(f"y : {y}\nw : {w}\ny == w : {y == w}\ny is w : {y is w}")
+########################################
+
+
+
+
+
+
+
+
+# ' == ' 메모리 객체가 가리키는 변수 값 자체      / 'is' 메모리 객체 자체
+# y 와 w 에서의 값이 같음 -> 'y==w': True       / y와 w의 메모리 객체는 다름 -> 'y is w': False
+# 메모리 객체와 id는 일대일 대응이라고 생각할 수 있다.
+# 변수는 자체로 메모리 객체를 가지고 있으며 값을 저장하는 데 사용되므로 메모리 객체를 가진다
+# 매개변수는 함수가 호출될 때 함수 외부에서 전달된 값을 받아들이는 역할 수행. 이 값은 함수 내에서 사용되며, 함수 실행 중에 메모리에 할당됨.
+# 매개변수는 값을 가지지 않고 다른 변수(메모리 객체)를 참조하여 사용하는 역할
