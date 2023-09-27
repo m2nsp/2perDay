@@ -71,6 +71,42 @@ int main(void) {
     // Perform addition of two matrices using 'addition_3D'
     addition_3D(A, B, result, dim1, dim2, dim3);
 
+
+    // Print results
+    printf("Matrix A:\n");
+    for (int i = 0; i < dim1; i++) {
+        for (int j = 0; j < dim2; j++) {
+            for (int k = 0; k < dim3; k++) {
+                printf("%lf ", A[i][j][k]); 
+            }
+            printf("\n"); 
+        }
+        printf("\n"); 
+    }
+
+    printf("Matrix B:\n");
+    for (int i = 0; i < dim1; i++) {
+        for (int j = 0; j < dim2; j++) {
+            for (int k = 0; k < dim3; k++) {
+                printf("%lf ", B[i][j][k]);  
+            }
+            printf("\n"); 
+        }
+        printf("\n"); 
+    }
+
+    printf("Result Matrix:\n");
+    for (int i = 0; i < dim1; i++) {
+        for (int j = 0; j < dim2; j++) {
+            for (int k = 0; k < dim3; k++) {
+                printf("%lf ", result[i][j][k]); 
+            }
+            printf("\n"); 
+        }
+        printf("\n"); 
+    }
+
+
     // Deallocate memory for A, B, and result
     mem_free_3D_double(A, dim1, dim2);
     mem_free_3D_double(B, dim1, dim2);
