@@ -17,3 +17,5 @@ def josephus_q(n, k):
 
 result = josephus_q(n, k)
 print(result)
+
+#que 사용하면 시간초과 문제 발생! que말고 deque사용하자
