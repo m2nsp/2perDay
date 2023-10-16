@@ -12,8 +12,7 @@ typedef struct DlistNode {
 
 typedef struct {
     DlistNode* top; 
-    DlistNode* bottom; 
-    int length;     
+    DlistNode* bottom;      
 } CDlinkedStackType;
 
 void init(CDlinkedStackType* list) {
