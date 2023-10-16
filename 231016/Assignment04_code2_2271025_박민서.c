@@ -24,7 +24,7 @@ double random() {
 }
 
 // Various state variables needed for simulation
-int duration = 10; // Simulation time
+int duration = 20; // Simulation time
 double arrival_prob = 0.7; // Average number of customers arriving in one time unit
 int max_serv_time = 5; // maximum service time for one customer
 int clock;
@@ -83,7 +83,7 @@ void insert_customer(int arrival_time) {
 }
 
 // Retrieve the customer waiting in the queue and return the customer's service time.
-int remove_customer(char c) {
+int remove_customer() {
     element customer;
     int service_time = 0;
 
@@ -91,13 +91,7 @@ int remove_customer(char c) {
         return 0;
 
     customer = dequeue(&queue);
-
-    if (c == 'A') {
-        service_time = customer.service_time - 1;
-    }
-    else {
-        service_time = customer.service_time - 1;
-    }
+    service_time = customer.service_time - 1;
 
     served_customers++;
     waited_time += clock - customer.arrival_time;
@@ -123,7 +117,7 @@ int main() {
     while (clock < duration) {
         clock++;
         printf("Current time=%d\n", clock);
-        if (is_customer_arrived(arrival_prob)) {
+        if (is_customer_arrived()) {
             insert_customer(clock);
         }
 
@@ -132,13 +126,13 @@ int main() {
         if (Aservice_time > 0)
             Aservice_time--;
         else {
-            Aservice_time = remove_customer('A');
+            Aservice_time = remove_customer();
         }
         // Bbanker check if the service is finished
         if (Bservice_time > 0)
             Bservice_time--;
         else {
-            Bservice_time = remove_customer('B');
+            Bservice_time = remove_customer();
         }
     }
     print_stat();
