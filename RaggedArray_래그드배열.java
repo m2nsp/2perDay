@@ -9,7 +9,8 @@ public class RaggedArray{
       for(int c = 0; c<ragged[r].length; c++)
         ragged[r][c] = c;
 
-
+  }
+}
 
   //ragged[0] -> [0]
   //ragged[1] -> [0, 1]
