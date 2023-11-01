@@ -14,7 +14,7 @@ TreeNode n4 = { 'D', NULL, NULL, NULL };
 TreeNode n5 = { 'E', NULL, NULL, NULL };
 TreeNode n6 = { 'F', &n4, &n5, NULL };
 TreeNode n7 = { 'G', &n3, &n6, NULL };
-TreeNode* exp = &n7;
+TreeNode* exp_node = &n7;
 
 TreeNode* left_most_node(TreeNode* p) {
 	if (p->left != NULL) {
@@ -41,7 +41,7 @@ TreeNode* tree_successor(TreeNode* p) {
 
 void main()
 {
-	TreeNode* q = exp;
+	TreeNode* q = exp_node;
 	n1.parent = &n3;
 	n2.parent = &n3;
 	n3.parent = &n7;
